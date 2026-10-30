@@ -1,0 +1,35 @@
+{
+  "brainmagick_LICENSE": {
+    "repository": "facebookresearch/brainmagick",
+    "revision": "1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e",
+    "url": "https://raw.githubusercontent.com/facebookresearch/brainmagick/1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e/LICENSE",
+    "sha256": "4b531055125dcda36059651634bdb424ad2612f4759b3d2067a731d2823d1cdc"
+  },
+  "brainmagick_bm_conf_model_clip_conv.yaml": {
+    "url": "https://raw.githubusercontent.com/facebookresearch/brainmagick/1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e/bm/conf/model/clip_conv.yaml",
+    "revision": "1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e",
+    "sha256": "db1b54a3103d0788d2c1525e5be2c4c638938d33bfbc05489a69b30879ab3902"
+  },
+  "brainmagick_bm_models_common.py": {
+    "repository": "facebookresearch/brainmagick",
+    "revision": "1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e",
+    "url": "https://raw.githubusercontent.com/facebookresearch/brainmagick/1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e/bm/models/common.py",
+    "sha256": "5d4e5591d40c0cd6b71ff066d24e8bb4b57036c06cf3c38f19f009f7ccd66f9f"
+  },
+  "brainmagick_bm_conf_model_defaults_defaults.yaml": {
+    "url": "https://raw.githubusercontent.com/facebookresearch/brainmagick/1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e/bm/conf/model_defaults/defaults.yaml",
+    "revision": "1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e",
+    "sha256": "39d46a71aed5267f4b917e42bb957d256def5ab30a013911df26635efd7bdf57"
+  },
+  "brainmagick_bm_conf_config.yaml": {
+    "url": "https://raw.githubusercontent.com/facebookresearch/brainmagick/1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e/bm/conf/config.yaml",
+    "revision": "1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e",
+    "sha256": "611668d58e2046d0ce9e7c867c87aec8e0a585bdae565c163dc7891b4e8007c6"
+  },
+  "brainmagick_bm_models_simpleconv.py": {
+    "repository": "facebookresearch/brainmagick",
+    "revision": "1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e",
+    "url": "https://raw.githubusercontent.com/facebookresearch/brainmagick/1aa77d2dbd801b4901aeadfd8606d26a89ee7e3e/bm/models/simpleconv.py",
+    "sha256": "44826ee79051b45678ba0b72df94654ed11926321f865f00d388aa1da69d8ad2"
+  }
+}

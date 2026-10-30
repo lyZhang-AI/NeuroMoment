@@ -1,0 +1,7 @@
+include README.md LICENSE THIRD_PARTY_NOTICES.md
+recursive-include configs *.json
+recursive-include scripts *.py
+recursive-include docs *.md *.json
+include third_party/brainmagick_sources.json third_party/EEGModels_LICENSE.txt
+recursive-include tests *.py
+prune third_party/baseline_sources

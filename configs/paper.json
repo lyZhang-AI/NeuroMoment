@@ -1,0 +1,12 @@
+{
+  "base_config": "configs/ds004408.json",
+  "split_seeds": [
+    7,
+    17,
+    27,
+    37,
+    47
+  ],
+  "training_seed": 7,
+  "note": "Five run-level data partitions, with the same training initialization seed across partitions."
+}

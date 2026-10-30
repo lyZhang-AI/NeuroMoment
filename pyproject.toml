@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuromoment"
+version = "0.2.1"
+description = "Event-anchored EEG word retrieval research implementation"
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = ["numpy>=1.24", "torch>=2.1"]
+
+[project.optional-dependencies]
+test = ["pytest>=7", "requests>=2.31"]
+eeg = ["mne>=1.6", "scipy>=1.10"]
+text = ["transformers>=4.40", "huggingface_hub>=0.23", "safetensors>=0.4", "sentencepiece>=0.2", "protobuf>=4"]
+download = ["requests>=2.31", "mne>=1.6"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "third_party/EEGModels_LICENSE.txt"]
+
+[tool.setuptools.packages.find]
+include = ["neuromoment*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

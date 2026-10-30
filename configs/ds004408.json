@@ -1,0 +1,137 @@
+{
+  "dataset": "ds004408",
+  "root": "datasets/ds004408",
+  "seed": 7,
+  "training_seed": 7,
+  "split_counts": [
+    16,
+    2,
+    2
+  ],
+  "candidates": 250,
+  "min_train": 1,
+  "strict_candidates": true,
+  "sample_rate": 128.0,
+  "low": 1.0,
+  "high": 30.0,
+  "epoch_start": -0.2,
+  "epoch_end": 1.0,
+  "context_start": -0.28,
+  "context_end": 1.08,
+  "guard": 2.0,
+  "preprocess_workers": 4,
+  "audit": "reports/paper/split_7/audit.json",
+  "embeddings": "data/paper/split_7/t5_large_words.npz",
+  "text_model": "google-t5/t5-large",
+  "text_revision": "150ebc2c4b72291e770f58e6057481c8d2ed331a",
+  "prepared": "data/paper/split_7/eeg",
+  "verification": "reports/paper/split_7/verification.json",
+  "runs": "runs/paper/split_7",
+  "training": {
+    "epochs": 100,
+    "batch_size": 64,
+    "dim": 32,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "patience": 10,
+    "min_delta": 0.0,
+    "sampling": "natural",
+    "threads": 2,
+    "workers": 2,
+    "device": "cpu",
+    "max_shift": 0.08,
+    "temperature": 0.07,
+    "shift_support": "overlap",
+    "shift_convention": "signal",
+    "prior_sigma": 0.08,
+    "prior_beta": 1.0,
+    "content_temperature": 1.0,
+    "latency_min": 0.0,
+    "latency_max": 1.0,
+    "latency_bins": 26,
+    "moments": 3,
+    "local_width": 0.16,
+    "nms_interval": 0.12,
+    "selection": "straight_through",
+    "selection_temperature": 1.0,
+    "fine_layers": 1,
+    "alignment_views": "original"
+  },
+  "models": [
+    {
+      "name": "neuromoment",
+      "mode": "adaptive",
+      "fine": true,
+      "fusion": "all",
+      "lambda_shift": 0.2,
+      "lambda_inv": 0.1
+    },
+    {
+      "name": "temporal_pool",
+      "mode": "temporal_pool",
+      "fine": false,
+      "fusion": "soft",
+      "lambda_shift": 0.0,
+      "lambda_inv": 0.0
+    },
+    {
+      "name": "global_offset",
+      "mode": "global_offset",
+      "fine": true,
+      "fusion": "all",
+      "lambda_shift": 0.2,
+      "lambda_inv": 0.1
+    },
+    {
+      "name": "content_attention",
+      "mode": "attention",
+      "fine": true,
+      "fusion": "all",
+      "lambda_shift": 0.2,
+      "lambda_inv": 0.1
+    },
+    {
+      "name": "without_fine",
+      "mode": "adaptive",
+      "fine": false,
+      "fusion": "all",
+      "lambda_shift": 0.2,
+      "lambda_inv": 0.1
+    },
+    {
+      "name": "without_shift_learning",
+      "mode": "adaptive",
+      "fine": true,
+      "fusion": "all",
+      "lambda_shift": 0.0,
+      "lambda_inv": 0.0
+    },
+    {
+      "name": "fixed_gaussian",
+      "mode": "fixed_gaussian",
+      "fine": true,
+      "fusion": "all",
+      "fixed_center": 0.3,
+      "lambda_shift": 0.2,
+      "lambda_inv": 0.1
+    },
+    {
+      "name": "global_prior",
+      "mode": "fixed_prior",
+      "fine": true,
+      "fusion": "all",
+      "lambda_shift": 0.2,
+      "lambda_inv": 0.1
+    }
+  ],
+  "ridge": null,
+  "evaluation_batch_size": 64,
+  "evaluation_shifts": [
+    -0.08,
+    -0.04,
+    0.0,
+    0.04,
+    0.08
+  ],
+  "upstream_commit": "b2d91784a90c18e1d76bd77dcb2b29b0ce27a0be"
+}
